@@ -1,0 +1,2 @@
+/Volumes/Global Storage/learn_flutter-main/android/app/.cxx/Debug/2e1b4v4j/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Volumes/Global Storage/learn_flutter-main/android/app/.cxx/Debug/2e1b4v4j/armeabi-v7a/CMakeFiles/rebuild_cache.dir
