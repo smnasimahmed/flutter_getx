@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:yummy_app/controller/theme_controller.dart';
+import 'package:yummy_app/home_screen/controllers/theme_controller.dart';
 
 class ThemeButton extends StatelessWidget {
   ThemeButton({super.key});

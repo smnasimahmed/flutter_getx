@@ -1,0 +1,2 @@
+/Volumes/Global Storage/nasimfarsid/learn_flutter_getx/android/app/.cxx/Debug/sy3r4o4j/x86_64/CMakeFiles/edit_cache.dir
+/Volumes/Global Storage/nasimfarsid/learn_flutter_getx/android/app/.cxx/Debug/sy3r4o4j/x86_64/CMakeFiles/rebuild_cache.dir

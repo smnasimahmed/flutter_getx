@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:yummy_app/controller/checkout_controller.dart';
-import 'package:yummy_app/controller/theme_controller.dart';
-import 'package:yummy_app/home.dart';
+import 'package:yummy_app/chekout_screen/controllers/checkout_controller.dart';
+import 'package:yummy_app/home_screen/controllers/theme_controller.dart'
+    show ThemeController;
+import 'package:yummy_app/home_screen/home.dart';
 import 'models/models.dart';
 import 'package:get/get.dart';
 
