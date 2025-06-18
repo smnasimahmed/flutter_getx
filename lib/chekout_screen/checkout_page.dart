@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:intl/intl.dart';
 import 'package:yummy_app/chekout_screen/controllers/checkout_controller.dart';
-import 'package:yummy_app/home_screen/home.dart';
 import 'package:yummy_app/models/models.dart';
 import 'package:yummy_app/models/order.dart';
+import 'package:yummy_app/route/app_route.dart';
 // import 'package:intl/intl.dart';
 
 class CheckoutPage extends StatelessWidget {
@@ -156,7 +156,7 @@ class CheckoutPage extends StatelessWidget {
                       items: items);
                   cartManager.resetCart();
                   orderManager.addOrder(order);
-                  Get.offAll(() => Home());
+                  Get.offAll(() => AppRoute.home);
                 },
           child: Padding(
             padding: const EdgeInsets.all(16.0),
