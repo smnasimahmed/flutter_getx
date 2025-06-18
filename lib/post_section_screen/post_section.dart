@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummy_app/post_screen/components/post_card.dart';
+import 'package:yummy_app/post_section_screen/components/post_card.dart';
 import 'package:yummy_app/models/models.dart';
 
 class PostSection extends StatelessWidget {

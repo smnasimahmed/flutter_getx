@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummy_app/category_screen/components/category_card.dart';
+import 'package:yummy_app/category_section_screen/components/category_card.dart';
 import 'package:yummy_app/models/models.dart';
 
 class CategorySection extends StatelessWidget {

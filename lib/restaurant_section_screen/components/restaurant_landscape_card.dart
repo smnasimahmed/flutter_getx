@@ -1,28 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:yummy_app/models/models.dart';
-import 'package:yummy_app/restaurant_screen/restaurant_page.dart';
 import 'package:get/get.dart';
+import 'package:yummy_app/route/app_route.dart';
 // import 'package:yummy_app/models/restaurant.dart';
 
-class RestaurantLandscapeCard extends StatefulWidget {
+class RestaurantLandscapeCard extends StatelessWidget {
   final Restaurant restaurant;
-  // final CartManager cartManager;
-  // final OrderManager orderManager;
-  const RestaurantLandscapeCard({
+  RestaurantLandscapeCard({
     super.key,
     required this.restaurant,
-    // required this.cartManager,
-    // required this.orderManager,
   });
 
-  @override
-  State<RestaurantLandscapeCard> createState() =>
-      _RestaurantLandscapeCardState();
-}
+  // Add _isFavorited property
+  RxBool _isFavorite = false.obs;
 
-class _RestaurantLandscapeCardState extends State<RestaurantLandscapeCard> {
-  // TODO: Add _isFavorited property
-  bool _isFavorite = false;
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context)
@@ -43,7 +34,7 @@ class _RestaurantLandscapeCardState extends State<RestaurantLandscapeCard> {
                 fit: StackFit.expand,
                 children: [
                   Image.asset(
-                    widget.restaurant.imageUrl,
+                    restaurant.imageUrl,
                     fit: BoxFit.cover,
                   ),
                   Positioned(
@@ -53,34 +44,32 @@ class _RestaurantLandscapeCardState extends State<RestaurantLandscapeCard> {
                       color: Colors.red,
                       iconSize: 30.0,
                       onPressed: () {
-                        setState(() {
-                          _isFavorite = !_isFavorite;
-                        });
+                        _isFavorite.value = !_isFavorite.value;
+                        // setState(() {
+
+                        // });
                       },
-                      icon: Icon(
-                          _isFavorite ? Icons.favorite : Icons.favorite_border),
+                      icon: Icon(_isFavorite.value
+                          ? Icons.favorite
+                          : Icons.favorite_border),
                     ),
                   ),
                 ],
               ),
             ),
           ),
-          // TODO: Add Listile
+          // Add Listile
           ListTile(
             title: Text(
-              widget.restaurant.name,
+              restaurant.name,
               style: textTheme.titleSmall,
             ),
             subtitle: Text(
-              widget.restaurant.attributes,
+              restaurant.attributes,
               style: textTheme.bodySmall,
             ),
             onTap: () {
-              Get.to(
-                () => RestaurantPage(
-                  restaurants: widget.restaurant,
-                ),
-              );
+              Get.toNamed(AppRoute.rastaurentPage, arguments: restaurant);
             },
           ),
         ],

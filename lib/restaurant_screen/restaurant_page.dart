@@ -5,11 +5,11 @@ import 'package:yummy_app/restaurant_screen/components/restaurent_item.dart';
 import 'package:yummy_app/models/models.dart';
 import 'package:yummy_app/chekout_screen/checkout_page.dart';
 
+// ignore: must_be_immutable
 class RestaurantPage extends StatelessWidget {
-  final Restaurant restaurants;
+  Restaurant restaurants = Get.arguments;
   RestaurantPage({
     super.key,
-    required this.restaurants,
   });
 
 // Add Desktop Threshold
@@ -122,8 +122,8 @@ class RestaurantPage extends StatelessWidget {
     final item = restaurants.items[index];
     return InkWell(
       onTap: () {
-        // Present Bottom Sheet in the future.
         _showBottomSheet(context, item);
+        // Present Bottom Sheet in the future.
       },
       child: RestaurantItem(item: item),
     );

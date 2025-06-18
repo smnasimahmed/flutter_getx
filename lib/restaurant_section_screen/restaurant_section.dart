@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:yummy_app/restaurant_section_screen/restaurant_landscape_card.dart';
+import 'package:yummy_app/restaurant_section_screen/components/restaurant_landscape_card.dart';
 import 'package:yummy_app/models/models.dart';
 
 class RestaurantSection extends StatelessWidget {
