@@ -38,23 +38,25 @@ class RestaurantLandscapeCard extends StatelessWidget {
                     restaurant.imageUrl,
                     fit: BoxFit.cover,
                   ),
-                  Positioned(
-                    top: 4.0,
-                    right: 4.0,
-                    child: IconButton(
-                      color: Colors.red,
-                      iconSize: 30.0,
-                      onPressed: () {
-                        _isFavorite.value = !_isFavorite.value;
-                        // setState(() {
+                  Obx(() {
+                    return Positioned(
+                      top: 4.0,
+                      right: 4.0,
+                      child: IconButton(
+                        color: Colors.red,
+                        iconSize: 30.0,
+                        onPressed: () {
+                          _isFavorite.value = !_isFavorite.value;
+                          // setState(() {
 
-                        // });
-                      },
-                      icon: Icon(_isFavorite.value
-                          ? Icons.favorite
-                          : Icons.favorite_border),
-                    ),
-                  ),
+                          // });
+                        },
+                        icon: Icon(_isFavorite.value
+                            ? Icons.favorite
+                            : Icons.favorite_border),
+                      ),
+                    );
+                  }),
                 ],
               ),
             ),

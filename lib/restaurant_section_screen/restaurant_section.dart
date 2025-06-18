@@ -26,7 +26,7 @@ class RestaurantSection extends StatelessWidget {
               ),
             ),
           ),
-          // TODO: Add Restaurant List View
+          // Add Restaurant List View
           SizedBox(
             height: 230,
             child: ListView.builder(
