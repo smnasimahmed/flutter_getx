@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:yummy_app/route/app_route.dart';
 // import 'package:yummy_app/models/restaurant.dart';
 
+// ignore: must_be_immutable
 class RestaurantLandscapeCard extends StatelessWidget {
   final Restaurant restaurant;
   RestaurantLandscapeCard({
@@ -12,7 +13,7 @@ class RestaurantLandscapeCard extends StatelessWidget {
   });
 
   // Add _isFavorited property
-  RxBool _isFavorite = false.obs;
+  final RxBool _isFavorite = false.obs;
 
   @override
   Widget build(BuildContext context) {
